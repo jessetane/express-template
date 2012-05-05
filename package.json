@@ -1,0 +1,12 @@
+{
+    "name": "FLAT STAN THE MAN"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.8"
+    , "stylus": ">= 0.0.1"
+    , "jade": ">= 0.0.1"
+    , "backbone": "<=999"
+    , "underscore": "<=999"
+  }
+}

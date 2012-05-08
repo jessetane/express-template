@@ -2,6 +2,6 @@
   "name"          : "underscore-ext",
   "description"   : "Some handy utils added to the underscore namespace.",
   "author"        : "Jesse Tane <jesse@twosixheave.com>",
-  "main"          : "underscore.ext.js",
+  "main"          : "underscore-ext.js",
   "version"       : "0.0.1"
 }

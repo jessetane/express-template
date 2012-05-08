@@ -1,16 +1,22 @@
 !!! 5
 html
   head
-    title Test
-    meta(name="description", content="A cool test")
-    meta(name="keywords", content="One, Two")
-    //link(rel="icon", href="images/favicon.ico")
-    //link(rel="shortcut icon", href="images/favicon.ico")
+    title A Template
+    meta(name="description", content="A Template")
+    meta(name="keywords", content="Index, One, Two")
+    //link(rel="icon", href="favicon.ico")
+    //link(rel="shortcut icon", href="favicon.ico")
     link(rel='stylesheet', href='/style/common.css')
     script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
     script(text="text/javascript")
+      
+      // since we have js, hide the body
+      $(document).ready(function () {
+        $("body").css({ visibility: "hidden" })
+      })
+      
       var mobile = navigator.appVersion.toLowerCase().search("mobile") > -1;
-      var device = (1) ? "mobile" : "desktop";
+      var device = (0) ? "mobile" : "desktop";
       
       // stylesheets
       var stylesheet = "/style/" + device + "/style.css";
@@ -25,8 +31,13 @@ html
       }
       
       // javascript
-      $.getScript("/" + device + ".js", function () {
-        require("app/init");
-      });
+      var script   = document.createElement("script");
+      script.type  = "text/javascript";
+      script.src   = "/" + device + ".js";
+      $("head")[0].appendChild(script);
+      $(script).load(function () {
+        require("app");
+        $("body").css({ visibility: "visible" })
+      })
       
     body!= body

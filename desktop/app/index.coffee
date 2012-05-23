@@ -11,4 +11,10 @@ module.exports = class extends Backbone.View
   
   initialize: =>
     @el = $ @el
-    @el.html @template({ data: "+js" })
+    callback = if @el.find(".index").length == 0 then @render else null
+    app.models.index.fetch success: callback
+  
+  render: =>
+    @el.html @template
+      common: app.models.common.toJSON()
+      index: app.models.index.toJSON()

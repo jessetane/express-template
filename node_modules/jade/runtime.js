@@ -127,3 +127,7 @@ exports.rethrow = function rethrow(err, filename, lineno){
     + '\n' + context + '\n\n' + err.message;
   throw err;
 };
+
+exports.partial = function partial (name, locals) {
+  return require("views/"+name)(locals);
+};

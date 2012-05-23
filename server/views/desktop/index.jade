@@ -1,7 +1,9 @@
-h1 Index#{data}
-a(href="/one") Page One
-br
-a(href="/two") Page Two
-br
-br
-a(href="http://google.com") External
+.index
+  h1 Index
+  h2!= index.data
+  a(href="/one") Page One
+  br
+  a(href="/two") Page Two
+  br
+  br
+  a(href="http://google.com", target="blank") External

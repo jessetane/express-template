@@ -1,0 +1,89 @@
+//
+//  handy.sass | generic handy stuff
+//  --------------------------------
+//  September 2011
+//
+
+//  general mixins
+//  --------------
+
+boxy()
+  box-sizing border-box
+  ms-box-sizing border-box
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+.boxy
+  boxy()
+
+noBoxy()
+  box-sizing content-box
+  ms-box-sizing content-box
+  -moz-box-sizing content-box
+  -webkit-box-sizing content-box
+.noBoxy
+  noBoxy()
+
+noSelect()
+  -webkit-user-select none
+  -khtml-user-select none
+  -moz-user-select none
+  -o-user-select none
+  user-select none
+.noSelect
+  noSelect()
+
+
+//  For layout
+//  ----------
+
+shrinkwrap()
+  display table
+  font-size 0px
+.shrinkwrap
+  shrinkwrap()
+
+nowrap()
+  white-space nowrap
+.nowrap
+  nowrap()
+
+wrap()
+  white-space normal
+.wrap
+  wrap()
+
+.center
+  margin-left auto
+  margin-right auto
+
+.vcenter
+  display table-cell
+  vertical-align middle
+
+inline()
+  display inline-block
+  display -moz-inline-box
+  -moz-box-orient vertical
+  vertical-align top
+.inline
+  inline()
+
+.floatLeft
+  float left
+
+.floatRight
+  float right
+
+.groupafter
+  visibility hidden
+  display block
+  content ""
+  clear both
+  height 0
+
+.spacer
+	clear both
+	pointer-events none
+
+.bold
+  font-weight bold

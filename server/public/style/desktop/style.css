@@ -1,3 +1,109 @@
+.boxy {
+  box-sizing: border-box;
+  ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.noBoxy {
+  box-sizing: content-box;
+  ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+.noSelect {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.shrinkwrap {
+  display: table;
+  font-size: 0px;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.wrap {
+  white-space: normal;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.vcenter {
+  display: table-cell;
+  vertical-align: middle;
+}
+.inline {
+  display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+}
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
+.groupafter {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+.spacer {
+  clear: both;
+  pointer-events: none;
+}
+.bold {
+  font-weight: bold;
+}
+* {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  font: 16px "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
 h1 {
+  margin: 0px;
+}
+h2 {
+  margin: 0px;
+}
+h3 {
+  margin: 0px;
+}
+a,
+a img {
+  border: none;
+}
+a:hover,
+a img:hover,
+a:hover img,
+a img:hover img {
+  border: none;
+}
+.anchor {
+  display: table;
+}
+.page {
+  position: relative;
+  width: 960px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.index h2 {
+  color: #f00;
+}
+.one h2 {
   color: #0f0;
+}
+.two h2 {
+  color: #00f;
 }

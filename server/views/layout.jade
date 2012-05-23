@@ -1,43 +1,17 @@
 !!! 5
 html
   head
-    title A Template
-    meta(name="description", content="A Template")
-    meta(name="keywords", content="Index, One, Two")
-    //link(rel="icon", href="favicon.ico")
-    //link(rel="shortcut icon", href="favicon.ico")
-    link(rel='stylesheet', href='/style/common.css')
-    script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
-    script(text="text/javascript")
-      
-      // since we have js, hide the body
-      $(document).ready(function () {
-        $("body").css({ visibility: "hidden" })
-      })
-      
-      var mobile = navigator.appVersion.toLowerCase().search("mobile") > -1;
-      var device = (0) ? "mobile" : "desktop";
-      
-      // stylesheets
-      var stylesheet = "/style/" + device + "/style.css";
-      if (document.createStyleSheet) {
-        document.createStyleSheet(stylesheet);
-      } else {
-        stylesheet = $("<link>")
-          .attr("rel", "stylesheet")
-          .attr("type", "text/css")
-          .attr("href", stylesheet)
-        $("link").last().after(stylesheet)
-      }
-      
-      // javascript
-      var script   = document.createElement("script");
-      script.type  = "text/javascript";
-      script.src   = "/" + device + ".js";
-      $("head")[0].appendChild(script);
-      $(script).load(function () {
-        require("app");
-        $("body").css({ visibility: "visible" })
-      })
-      
+    title #{common.title}
+    meta(name="description", content="#{common.description}")
+    meta(name="keywords", content="#{common.keywords.join(', ')}")
+    - if (common.client == "mobile")
+      meta(name="apple-mobile-web-app-capable", content="yes")
+      meta(name="apple-mobile-web-app-status-bar-style", content="black")
+      meta(name="viewport", content="width=320, initial-scale=1.0, user-scalable=no")
+    link(rel="icon", href="favicon.ico")
+    link(rel="shortcut icon", href="favicon.ico")
+    link(rel='stylesheet', href="#{staticVersion('/style/' + common.client + '/style.css')}")
+    script(type="text/javascript", src="#{staticVersion('/script/jquery.js')}")
+    script(type="text/javascript", src="#{staticVersion('/script/' + common.client + '.js')}")
+    script(type="text/javascript") require("app");
     body!= body

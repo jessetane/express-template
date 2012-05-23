@@ -1,12 +1,20 @@
 {
-  "name"          : "A webapp template",
-  "version"       : "0.0.1",
-  "private"       : true,
-  "dependencies"  : {
-    "express"       : ">= 0.0.1",
-    "stylus"        : ">= 0.0.1",
-    "jade"          : ">= 0.0.1",
-    "backbone"      : ">= 0.0.1",
-    "underscore"    : ">= 0.0.1"
+  "name": "express-template",
+  "author": "Jesse Tane <jesse.tane@gmail.com>",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "connect": ">= 0",
+    "express": ">= 0",
+    "stylus": ">= 0",
+    "underscore": ">= 0",
+    "coffee-script": ">= 0",
+    "ua-parser": ">= 0",
+    "underscore-ext": "git://github.com/jessetane/underscore-ext.git",
+    "backbone": "git://github.com/jessetane/backbone.git",
+    "backbone-ext": "git://github.com/jessetane/backbone-ext.git",
+    "jquery-color-animation": "git://github.com/jessetane/jquery-color-animation.git",
+    "jade": "git://github.com/jessetane/jade.git",
+    "stitch": "git://github.com/jessetane/stitch.git"
   }
 }

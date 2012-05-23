@@ -154,10 +154,10 @@ exports.compile = function(str, options){
   }
 
   if (client) {
-    fn = 'var attrs = jade.attrs, escape = jade.escape, rethrow = jade.rethrow;\n' + fn;
+    fn = 'var attrs = jade.attrs, escape = jade.escape, rethrow = jade.rethrow, partial = jade.partial;\n' + fn;
   }
 
-  fn = new Function('locals, attrs, escape, rethrow', fn);
+  fn = new Function('locals, attrs, escape, rethrow, partial', fn);
 
   if (client) return fn;
 

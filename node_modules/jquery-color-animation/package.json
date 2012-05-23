@@ -1,0 +1,7 @@
+{
+  "name"          : "jquery-color-animation",
+  "description"   : "jQuery plugin adds support for color animation",
+  "author"        : "Edwin Martin <edwin@bitstorm.org>",
+  "main"          : "jquery-color-animation.js",
+  "version"       : "0.0.1"
+}

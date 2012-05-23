@@ -1,1 +1,1 @@
-Express app template
+An experimental Express app template

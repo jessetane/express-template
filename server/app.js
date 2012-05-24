@@ -83,7 +83,7 @@ app.configure(function () {
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(stylus.middleware({ src: __dirname, dest: __dirname + '/public' }));
-  app.use(connect.basicAuth(function (user, pass) { return 'yume' == user && 'oceanseleven' == pass }));
+  app.use(connect.basicAuth(function (user, pass) { return 'a' == user && 'b' == pass }));
   app.use(app.router);
   app.use(staticCache);
   app.use(express.static(__dirname + '/public'));
@@ -100,7 +100,7 @@ app.configure('development', function () {
 app.configure('production', function () {
   stitch.compress = true;
   app.use(express.errorHandler());
-  app.listen(8001);
+  app.listen(8000);
 });
 
 
